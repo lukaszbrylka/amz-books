@@ -1,5 +1,6 @@
 package com.amz.books.pages;
 
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -39,8 +40,9 @@ public class CheckoutPage extends BasePage {
     @FindBy(name = "ppw-expirationDate_year")
     private WebElement expiryYearDropdown;
     @FindBy(name = "ppw-cvv")
-
     private WebElement cvvInput;
+    @FindBy(id = "confirm-card-id")
+    private WebElement applyCardButton;
 
     public CheckoutPage(WebDriver driver) {
         super(driver);
@@ -81,7 +83,7 @@ public class CheckoutPage extends BasePage {
     }
 
     public boolean isAddressSaved() {
-        return shipToThisAddressButton.isDisplayed(); // Adjust based on confirmation element
+        return shipToThisAddressButton.isDisplayed();
     }
 
     public boolean isPaymentSectionDisabled() {
@@ -104,7 +106,11 @@ public class CheckoutPage extends BasePage {
     }
 
     public boolean isCardAccepted() {
-        // You may need to check for confirmation or error message
-        return true; // Placeholder
+        try {
+            waitForElementToBeEnabled(applyCardButton);
+            return true;
+        } catch (TimeoutException exception) {
+            return false;
+        }
     }
 }
