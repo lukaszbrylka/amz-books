@@ -4,7 +4,12 @@ import com.amz.books.model.Book;
 import com.amz.books.model.enums.SearchFilters;
 import com.amz.books.pages.BooksPage;
 import com.amz.books.driver.DriverManager;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Order;
 
 import java.util.List;
 
