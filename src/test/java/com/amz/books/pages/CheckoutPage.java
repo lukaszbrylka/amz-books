@@ -9,39 +9,39 @@ import org.openqa.selenium.support.ui.Select;
 
 public class CheckoutPage extends BasePage {
 
-    @FindBy(id = "ap_email_login")
+    @FindBy(xpath = "//input[@id='ap_email_login']")
     private WebElement emailInput;
-    @FindBy(id = "continue")
+    @FindBy(xpath = "//input[@id='continue']")
     private WebElement continueButton;
-    @FindBy(css = "div.a-box-inner")
+    @FindBy(xpath = "//div[contains(@class,'a-box-inner')]")
     private WebElement checkoutSummary;
-    @FindBy(id = "address-ui-widgets-enterAddressFullName")
+    @FindBy(xpath = "//input[@id='address-ui-widgets-enterAddressFullName']")
     private WebElement fullNameInput;
-    @FindBy(id = "address-ui-widgets-enterAddressLine1")
+    @FindBy(xpath = "//input[@id='address-ui-widgets-enterAddressLine1']")
     private WebElement addressLine1Input;
-    @FindBy(id = "address-ui-widgets-enterAddressCity")
+    @FindBy(xpath = "//input[@id='address-ui-widgets-enterAddressCity']")
     private WebElement cityInput;
-    @FindBy(id = "address-ui-widgets-enterAddressPostalCode")
+    @FindBy(xpath = "//input[@id='address-ui-widgets-enterAddressPostalCode']")
     private WebElement postalCodeInput;
-    @FindBy(id = "address-ui-widgets-enterAddressCountryCode")
+    @FindBy(xpath = "//select[@id='address-ui-widgets-enterAddressCountryCode']")
     private WebElement countryDropdown;
-    @FindBy(name = "shipToThisAddress")
+    @FindBy(xpath = "//input[@name='shipToThisAddress']")
     private WebElement shipToThisAddressButton;
-    @FindBy(css = "div.payment-section-disabled")
+    @FindBy(xpath = "//div[contains(@class,'payment-section-disabled')]")
     private WebElement paymentSectionDisabled;
-    @FindBy(id = "continue-bottom")
+    @FindBy(xpath = "//input[@id='continue-bottom']")
     private WebElement continueToPaymentButton;
-    @FindBy(css = "div.address-section-disabled")
+    @FindBy(xpath = "//div[contains(@class,'address-section-disabled')]")
     private WebElement addressSectionDisabled;
-    @FindBy(name = "addCreditCardNumber")
+    @FindBy(xpath = "//input[@name='addCreditCardNumber']")
     private WebElement cardNumberInput;
-    @FindBy(name = "ppw-expirationDate_month")
+    @FindBy(xpath = "//select[@name='ppw-expirationDate_month']")
     private WebElement expiryMonthDropdown;
-    @FindBy(name = "ppw-expirationDate_year")
+    @FindBy(xpath = "//select[@name='ppw-expirationDate_year']")
     private WebElement expiryYearDropdown;
-    @FindBy(name = "ppw-cvv")
+    @FindBy(xpath = "//input[@name='ppw-cvv']")
     private WebElement cvvInput;
-    @FindBy(id = "confirm-card-id")
+    @FindBy(xpath = "//input[@id='confirm-card-id']")
     private WebElement applyCardButton;
 
     public CheckoutPage(WebDriver driver) {
