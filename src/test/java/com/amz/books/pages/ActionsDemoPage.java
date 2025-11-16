@@ -16,18 +16,25 @@ public class ActionsDemoPage extends BasePage {
 
     @FindBy(xpath = "//input[@id='action1']")
     private WebElement singleClickButton;
+
     @FindBy(xpath = "//span[@id='action1Status']")
     private WebElement singleClickStatus;
+
     @FindBy(xpath = "//input[@id='action1A']")
     private WebElement doubleClickButton;
+
     @FindBy(xpath = "//span[@id='action1AStatus']")
     private WebElement doubleClickStatus;
+
     @FindBy(xpath = "//input[@id='action3']")
     private WebElement keyboardInput;
+
     @FindBy(xpath = "//ul[@id='sortable1']/li")
     private List<WebElement> leftColumnItems;
+
     @FindBy(xpath = "//ul[@id='sortable2']/li")
     private List<WebElement> rightColumnItems;
+
     @FindBy(xpath = "//ul[@id='sortable2']")
     private WebElement rightColumn;
 
@@ -37,23 +44,23 @@ public class ActionsDemoPage extends BasePage {
     }
 
     public String getSingleClickStatusText() {
-        return getElementText(singleClickStatus);
+        return getText(singleClickStatus);
     }
 
     public void doubleClickButton() {
-        doubleClickElement(doubleClickButton);
+        doubleClick(doubleClickButton);
     }
 
     public String getDoubleClickStatusText() {
-        return getElementText(doubleClickStatus);
+        return getText(doubleClickStatus);
     }
 
     public void typeIntoTestInput(String text) {
-        sendKeyboardInput(keyboardInput, text);
+        type(keyboardInput, text);
     }
 
     public String getTestInputText() {
-        return getInputElementText(keyboardInput);
+        return getValue(keyboardInput);
     }
 
 
