@@ -26,6 +26,7 @@ public class CheckoutFlowTests extends BaseTest {
         cartPageSteps = new CartPageSteps(DriverManager.getInstance().getDriver());
         checkoutPageSteps = new CheckoutPageSteps(DriverManager.getInstance().getDriver());
     }
+    // this is NOT example of "Chain of responsibility" pattern, it is just method chaining.
 
     @Test
     void shouldCompleteCheckoutFlow() {

@@ -23,6 +23,7 @@ public class BookSearchTests extends BaseTest {
         booksSteps = new BooksPageSteps(DriverManager.getInstance().getDriver());
     }
 
+    // this is NOT example of "Chain of responsibility" pattern, it is just method chaining.
     @Test
     void shouldSearchAndApplyFilterScenario() {
         bookTitle = "thinking in java";
